@@ -1,4 +1,4 @@
-namespace Lab2_08102024.Models;
+namespace WebApp.Models;
 
 public class ErrorViewModel
 {

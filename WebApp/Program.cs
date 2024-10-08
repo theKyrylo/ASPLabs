@@ -1,4 +1,4 @@
-namespace Lab2_08102024;
+namespace WebApp;
 
 public class Program
 {
