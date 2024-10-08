@@ -1,18 +1,7 @@
-@model dynamic
-
 @{
-    Layout = null;
+    ViewBag.Title = "Kalkulator";
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
-</div>
-</body>
-</html>
+<h2>@ViewBag.Title</h2>
+<p>Wynik obliczeń: @ViewBag.a @ViewBag.operation @ViewBag.b = @ViewBag.result</p>
