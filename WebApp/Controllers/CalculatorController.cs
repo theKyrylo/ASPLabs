@@ -1,6 +1,12 @@
-namespace DefaultNamespace;
+using Microsoft.AspNetCore.Mvc;
 
-public class CalculatorController
+namespace WebApp.Controllers;
+
+public class CalculatorController : Controller
 {
-    
+    // GET
+    public IActionResult Index()
+    {
+        return View();
+    }
 }
