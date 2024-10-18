@@ -1,0 +1,8 @@
+@model Birth
+
+@{
+    ViewBag.Title = "Wiek";
+    Layout = "_Layout";
+}
+<p>@Model.DateOfBirth</p>
+<h2>Cześć @Model.Name, masz @Model.GetAge() lat(a)</h2>

@@ -1,0 +1,27 @@
+@model Birth
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <h2>Kalkulator wieku</h2>
+            <form action="Result" method="POST">
+                <div class="mb-3">
+                    <label class="form-label" for="name">Wpisz swoje imię: </label>
+                    <input class="form-control" type="text" name="Name" step="0.00001" id="name"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="date-of-birth">Wybierz datę urodzenia: </label>
+                    <input class="form-control" type="date" name="DateOfBirth" step="0.00001" id="date-of-birth"/>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit">Oblicz Swój wiek</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
