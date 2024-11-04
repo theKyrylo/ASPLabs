@@ -1,0 +1,46 @@
+@model Contact
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2 xmlns="http://www.w3.org/1999/html">Dodaj kontakt</h2>
+<form asp-action="ContactForm" asp-controller="Contact" method="post">
+    <div>
+        <label asp-for="FirstName">Twoje imię: </label>
+        <div>
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="text" asp-for="FirstName"/>
+    </div>
+    <div>
+        <label asp-for="LastName">Twoje nazwisko: </label>
+        <div>
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="text" asp-for="LastName"/>
+    </div>
+    <div>
+        <label asp-for="Email">Twój email: </label>
+        <div>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="email" asp-for="Email"/>
+    </div>
+    <div>
+        <label asp-for="PhoneNumber">Twój numer telefonu: </label>
+        <div>
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="tel" asp-for="PhoneNumber"/>
+    </div>
+    <div>
+        <label asp-for="DateOfBirth">Twoja data urodzenia: </label>
+        <div>
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+        </div>
+        <input class="form-control" type="date" asp-for="DateOfBirth"/>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Zapisz</button>
+</form>

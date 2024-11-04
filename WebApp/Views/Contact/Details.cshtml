@@ -1,0 +1,16 @@
+@model Contact
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Szczególy</h2>
+<h4>Imię i nazwisko</h4>
+<h3>@Model.FirstName @Model.LastName</h3>
+<h4>Email</h4>
+<h3>@Model.Email</h3>
+<h4>Numer telefonu</h4>
+<h3>@Model.PhoneNumber</h3>
+<h4>Data Urodzenia</h4>
+<h3>@Model.DateOfBirth</h3>

@@ -1,0 +1,36 @@
+@model Contact
+
+@{
+ViewBag.Title = "title";
+Layout = "_Layout";
+}
+<h2 xmlns="http://www.w3.org/1999/html">Edytuj kontakt</h2>
+<form asp-action="Edit" method="post">
+    <input asp-for="Id"/>
+    <div class="mb-3">
+        <label class="form-label" asp-for="FirstName"></label>
+        <input class="form-control" asp-for="FirstName"/>
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="LastName"></label>
+        <input class="form-control" asp-for="LastName"/>
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Email">Email</label>
+        <input class="form-control" asp-for="Email"/>
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="PhoneNumber"></label>
+        <input class="form-control" asp-for="PhoneNumber"/>
+        <span asp-validation-for="PhoneNumber"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="DateOfBirth"></label>
+        <input class="form-control" asp-for="DateOfBirth"/>
+        <span asp-validation-for="DateOfBirth"></span>
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Aktualizuj</button>
+</form>
