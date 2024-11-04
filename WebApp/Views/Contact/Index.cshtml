@@ -1,4 +1,4 @@
-@model Dictionary<int, Contact>
+@model List<Contact>
 
 <h2 xmlns="http://www.w3.org/1999/html">Lista kontaktów</h2>
 <table>
@@ -12,32 +12,38 @@
         <th>
             Email
         </th>
+        <th>
+            Priorytet
+        </th>
     </tr>
     @foreach(var item in @Model)
     {
     <tr>
         <td>
-            @item.Value.LastName
+            @item.LastName
         </td>
         <td>
-            @item.Value.FirstName
+            @item.FirstName
         </td>
         <td>
-            @item.Value.Email
+            @item.Email
+        </td>
+        <td>
+            @item.Priority
         </td>
         <td>
             <a class="btn btn-primary"
                asp-action="Edit"
                asp-controller="Contact"
-               asp-route-id=@item.Value.Id>Edytuj</a>
+               asp-route-id=@item.Id>Edytuj</a>
             <a class="btn btn-primary"
                asp-action="Details"
                asp-controller="Contact"
-               asp-route-id=@item.Value.Id>Szczegóły</a>
+               asp-route-id=@item.Id>Szczegóły</a>
             <a class="btn btn-primary"
                asp-action="Delete"
                asp-controller="Contact"
-               asp-route-id=@item.Value.Id>Usuń</a>
+               asp-route-id=@item.Id>Usuń</a>
         </td>
     </tr>
     }

@@ -9,7 +9,7 @@ public class ContactController : Controller
     
     public IActionResult Index()
     {
-        return View(_contacts);
+        return View(_contacts.Values.ToList());
     }
     
     [HttpGet]
