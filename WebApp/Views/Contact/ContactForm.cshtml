@@ -49,5 +49,9 @@
         </div>
         <select class="form-control" asp-for="Priority" asp-items="@Html.GetEnumSelectList<Priority>()"></select>
     </div>
+    <div>
+        <label asp-for="OrganizationId">Organizacja: </label>
+        <select asp-for="OrganizationId" asp-items="@Model.Organizations"></select>
+    </div>
     <button type="submit" class="btn btn-outline-primary">Zapisz</button>
 </form>

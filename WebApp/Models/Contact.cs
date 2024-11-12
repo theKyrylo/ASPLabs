@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebApp.Models;
 
@@ -33,4 +35,7 @@ public class Contact
     
     [Display(Name = "Priorytet")]
     public Priority Priority { get; set; }
+    
+    [HiddenInput] public int OrganizationId { get; set; }
+    [ValidateNever] public List<SelectListItem>? Organizations { get; set; }
 }

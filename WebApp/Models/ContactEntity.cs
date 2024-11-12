@@ -23,6 +23,8 @@ public class ContactEntity
     public string PhoneNumber { get; set; }
     public DateTime DateOfBirth { get; set; }
     public Priority Priority { get; set; }
-    
     public DateTime CreatedOn { get; set; }
+    
+    public int OrganizationId { get; set; }
+    public OrganizationEntity? Organization { get; set; }
 }

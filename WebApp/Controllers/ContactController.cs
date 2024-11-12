@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using WebApp.Models;
 using WebApp.Models.Services;
 
@@ -22,7 +24,15 @@ namespace WebApp.Controllers
         [HttpGet]
         public IActionResult ContactForm()
         {
-            return View();
+            var model = new Contact();
+            model.Organizations = _contactService.GetOrganizations()
+                .Select(x => new SelectListItem()
+                {
+                    Value = x.ID.ToString(), Text = x.Name,
+                    Selected = x.ID == 1
+                })
+                .ToList();
+            return View(model);
         }
 
         [HttpPost]

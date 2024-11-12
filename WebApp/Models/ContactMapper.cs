@@ -12,7 +12,8 @@ public class ContactMapper
             Email = entity.Email,
             PhoneNumber = entity.PhoneNumber,
             DateOfBirth = entity.DateOfBirth,
-            Priority = entity.Priority
+            Priority = entity.Priority,
+            OrganizationId = entity.OrganizationId
         };
     }
 
@@ -26,7 +27,8 @@ public class ContactMapper
             Email = contact.Email,
             PhoneNumber = contact.PhoneNumber,
             DateOfBirth = contact.DateOfBirth,
-            Priority = contact.Priority
+            Priority = contact.Priority,
+            OrganizationId = contact.OrganizationId
         };
     }
 }

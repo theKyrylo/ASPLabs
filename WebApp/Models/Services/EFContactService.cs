@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace WebApp.Models.Services;
 
 public class EfContactService : IContactService
@@ -28,7 +30,13 @@ public class EfContactService : IContactService
 
     public Contact? GetContactById(int id)
     {
-        var entity = _context.Contacts.Find(id);
+        var entity = _context.Contacts.Include(e => e.Organization)
+            .FirstOrDefault(e => e.Id == id);
         return entity != null ? ContactMapper.FromEntity(entity) : null;
+    }
+
+    public List<OrganizationEntity> GetOrganizations()
+    {
+        return _context.Organizations.ToList();
     }
 }

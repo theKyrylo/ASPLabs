@@ -7,4 +7,6 @@ public interface IContactService
     void DeleteContact(int id);
     List<Contact> GetContacts();
     Contact? GetContactById(int id);
+    
+    List<OrganizationEntity> GetOrganizations();
 }
